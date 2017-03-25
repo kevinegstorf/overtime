@@ -10,7 +10,7 @@ script:
 before_install:
   - gem update --system
   - gem install bundler
-  - gem install rails
+  - gem install --pre rails -v 5.1.0.beta1
 before_script:
   - psql -c 'create database Overtime_test;' -U postgres
 notifications:
