@@ -1,5 +1,5 @@
-# Overtime App
-
+# Overtime App [![Build Status](https://travis-ci.org/kevinegstorf/overtime.svg?branch=master)](https://travis-ci.org/kevinegstorf/overtime)
+ 
 **Key requirements: company needs documentation that salaried employees or did not get overtime each week**
 
 ## DB Model
