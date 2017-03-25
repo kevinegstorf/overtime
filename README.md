@@ -1,24 +1,19 @@
-# README
+# Overtime App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Key requirements: company needs documentation that salaried employees or did not get overtime each week**
 
-Things you may want to cover:
+## DB Model
+- Post -> date:date rationale:text
+- User -> Devise
+- AdminUSer -> Single Table Inheritance
 
-* Ruby version
+## Features
+- Approval Workflow
+- SMS Sending -> Link to approval or overtime input
+- Administrate admin Dashboard
+- Email summary to managers for Approval
+- Needs to be documented if employee did not log overtime
 
-* System dependencies
+## UI
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Bootstrap -> formatting
