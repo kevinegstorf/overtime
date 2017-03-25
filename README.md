@@ -15,5 +15,7 @@
 - Needs to be documented if employee did not log overtime
 
 ## UI
-
 - Bootstrap -> formatting
+
+## Refactor TODOS
+- Refactor user Association integration test in post_spec
