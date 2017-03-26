@@ -19,3 +19,6 @@
 
 ## Refactor TODOS
 - Refactor user Association integration test in post_spec
+
+## Misc TODOS
+- Add translations with i18n
