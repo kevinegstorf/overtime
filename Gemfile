@@ -25,6 +25,7 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.7'
   gem 'rubocop'
   gem 'shoulda-matchers', '~> 2'
+  gem 'faker'
 end
 
 group :development do
