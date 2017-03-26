@@ -1,29 +1,33 @@
 require 'rails_helper'
 
 describe 'navigate' do
+  before do
+    @user = User.create(email: 'test@test.com', password: 'asdfasdf', password_confirmation: 'asdfasdf', first_name: 'Jon', last_name: 'Snow')
+    login_as(@user, scope: :user)
+  end
+
   describe 'index' do
     before do
-      @user = User.create!(email: 'test@test.com', password: '123password', password_confirmation: '123password', first_name: 'Jon', last_name: 'Snow')
-      login_as(@user, scope: :user)
-      visit new_post_path
+      visit posts_path
     end
 
     it 'can be reached successfully' do
-      login_as(@user, scope: :user)
-      visit posts_path
       expect(page.status_code).to eq(200)
     end
 
-    it 'has a title Posts' do
-      visit posts_path
+    it 'has a title of Posts' do
       expect(page).to have_content(/Posts/)
+    end
+
+    it 'has a list of posts' do
+      2.times { |post| Post.create!(date: Date.today, rationale: "Post#{post}", user_id: @user.id) }
+      visit posts_path
+      expect(page).to have_content(/Post1|Post2/)
     end
   end
 
   describe 'creation' do
     before do
-      @user = User.create!(email: 'test@test.com', password: '123password', password_confirmation: '123password', first_name: 'Jon', last_name: 'Snow')
-      login_as(@user, scope: :user)
       visit new_post_path
     end
 
@@ -38,11 +42,12 @@ describe 'navigate' do
 
       expect(page).to have_content('Some rationale')
     end
-    
+
     it 'will have a user associated it' do
       fill_in 'post[date]', with: Date.today
       fill_in 'post[rationale]', with: 'User Association'
       click_on 'Save'
+
       expect(User.last.posts.last.rationale).to eq('User Association')
     end
   end
