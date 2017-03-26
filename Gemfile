@@ -24,6 +24,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 4.7'
   gem 'rubocop'
+  gem 'shoulda-matchers', '~> 2'
 end
 
 group :development do

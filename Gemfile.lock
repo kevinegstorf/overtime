@@ -186,6 +186,8 @@ GEM
     ruby-progressbar (1.8.1)
     ruby_dep (1.5.0)
     sass (3.4.23)
+    shoulda-matchers (2.8.0)
+      activesupport (>= 3.0.0)
     spring (2.0.1)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -241,6 +243,7 @@ DEPENDENCIES
   rspec-rails (~> 3.0)
   rubocop
   sass-rails!
+  shoulda-matchers (~> 2)
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

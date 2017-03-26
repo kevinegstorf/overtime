@@ -1,18 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  describe 'creation' do
-    before do
-      @user = User.create(email: 'test@test.com', password: '123password', password_confirmation: '123password', first_name: 'Jon', last_name: 'Snow')
-    end
-    it 'can be created' do
-      expect(@user).to be_valid
-    end
-    
-    it "cannot be created without first_name, last_name" do
-      @user.first_name = nil
-      @user.last_name = nil
-      expect(@user).to_not be_valid
-    end
-  end
+  it { is_expected.to have_many(:posts) }
+  it { is_expected.to validate_presence_of :first_name }
+  it { is_expected.to validate_presence_of :last_name }
 end
