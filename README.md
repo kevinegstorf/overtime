@@ -19,4 +19,3 @@
 
 ## Refactor TODOS
 - Refactor user Association integration test in post_spec
-- fix failing model tests
