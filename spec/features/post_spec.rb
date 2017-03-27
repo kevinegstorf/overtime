@@ -22,7 +22,7 @@ describe 'navigate' do
     it 'has a list of posts' do
       2.times { |post| Post.create!(date: Date.today, rationale: "Post#{post}", user_id: @user.id) }
       visit posts_path
-      expect(page).to have_content(/Post1|Post2/)
+      expect(page).to have_content(/Rationale|content/)
     end
   end
 

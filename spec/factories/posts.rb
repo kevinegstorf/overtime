@@ -1,13 +1,13 @@
 FactoryGirl.define do
   factory :post do
     date Date.today
-    rationale Faker::Lorem.words(4)
-    user_id 12
+    rationale "Some Rationale"
+    user
   end
-  
-  factory :second_post, class: Post do
+
+  factory :second_post, class: "Post" do
     date Date.yesterday
-    rationale Faker::Lorem.words(4)
-    user_id 14
+    rationale "Some more content"
+    user
   end
 end
