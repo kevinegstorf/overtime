@@ -22,3 +22,4 @@
 
 ## Misc TODOS
 - Add translations with i18n
+- Add test coverage
