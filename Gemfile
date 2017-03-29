@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.2'
 gem 'dotenv-rails', '~> 2'
 gem 'bootstrap-sass'
+gem 'gritter', '1.2.0'
 
 group :development, :test do
   gem 'byebug'
