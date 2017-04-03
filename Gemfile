@@ -17,6 +17,8 @@ gem 'devise', '~> 4.2'
 gem 'dotenv-rails', '~> 2'
 gem 'bootstrap-sass'
 gem 'gritter', '1.2.0'
+gem 'rails_admin'
+gem 'erubis'
 
 group :development, :test do
   gem 'byebug'
