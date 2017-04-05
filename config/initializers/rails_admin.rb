@@ -1,5 +1,18 @@
 RailsAdmin.config do |config|
   config.main_app_name = ['Overtime admin', '%development%']
+  
+  # config.authorize_with do
+  #   authenticate_or_request_with_http_basic('Login required') do |username, password|
+  #     user = User.where(email: username, password: password, admin: true).first
+  #     user
+  #   end
+  
+  config.authorize_with do |controller|
+    unless current_user.type == "AdminUser"
+      flash[:error] = "You are not an admin"
+      redirect_to main_app.root_path
+    end
+  end
 
   ### Popular gems integration
 
